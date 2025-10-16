@@ -1,4 +1,4 @@
-package MultiThread_Print100_Numbers;
+package MultiThread_Runnable;
 
 public class Client {
     public void startTasks() {

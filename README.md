@@ -70,3 +70,24 @@
 | ------------------------------------------------- | -------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | 🧍‍♂️ One person cooking and talking on the phone | Switching between cooking and talking (one at a time, but tasks overlap in time) | Two people — one cooks, one talks (both actually happening at once) |
 | 🧵 In code                                        | One thread interleaving tasks                                                    | Multiple threads on different cores truly executing simultaneously  |
+
+
+# 🧱 Basic Thread Program Flow in Java
+
+| Step  | Code Element                       | Description                                                     | Example Snippet                                                  |
+| ----- | ---------------------------------- | --------------------------------------------------------------- | ---------------------------------------------------------------- |
+| **1** | **Define a Task**                  | Create a class that implements `Runnable` (or extend `Thread`). | `class MyTask implements Runnable { public void run() { ... } }` |
+| **2** | **Create a Thread Object**         | Pass the task to a `Thread` instance.                           | `Thread t = new Thread(new MyTask());`                           |
+| **3** | **Start the Thread**               | Call `start()` to tell JVM to run `run()` in a new thread.      | `t.start();`                                                     |
+| **4** | **(Optional) Name Thread**         | Helps identify threads in logs/debugging.                       | `new Thread(new MyTask(), "Worker-1");`                          |
+| **5** | **(Optional) Synchronize or Wait** | Use `join()` to wait for thread completion.                     | `t.join();`                                                      |
+| **6** | **End of Execution**               | Thread terminates automatically when `run()` completes.         | —                                                                |
+
+
+| Feature              | `Runnable`                            | `Callable<V>`                         |
+| -------------------- | ------------------------------------- | ------------------------------------- |
+| **Return value**     | Cannot return anything (`void run()`) | Returns a value (`V call()`)          |
+| **Exceptions**       | Cannot throw checked exceptions       | Can throw checked exceptions          |
+| **Method name**      | `run()`                               | `call()`                              |
+| **Result retrieval** | Not possible                          | Via `Future.get()`                    |
+| **Common use**       | Fire-and-forget tasks                 | Tasks that compute and return results |

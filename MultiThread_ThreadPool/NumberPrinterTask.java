@@ -1,4 +1,4 @@
-package MultiThread_Print100_Numbers;
+package MultiThread_ThreadPool;
 
 public class NumberPrinterTask implements Runnable {
     private final int start;
@@ -12,7 +12,12 @@ public class NumberPrinterTask implements Runnable {
     @Override
     public void run() {
         for (int i = start; i <= end; i++) {
-            System.out.println(i);
+            System.out.println(Thread.currentThread().getName() + " -> " + i);
+            try {
+                Thread.sleep(10); // small delay to see interleaving
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
         }
     }
     
