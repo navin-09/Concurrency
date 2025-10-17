@@ -1,4 +1,4 @@
-package MultiThread_Runnable;
+package MutliThread.MultiThread_ThreadPool;
 
 public class Main {
     public static void main(String[] args) {

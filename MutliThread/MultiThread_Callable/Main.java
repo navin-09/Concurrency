@@ -1,4 +1,4 @@
-package MultiThread_Callable;
+package MutliThread.MultiThread_Callable;
 
 public class Main {
     public static void main(String[] args) {

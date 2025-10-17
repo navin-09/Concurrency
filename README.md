@@ -91,3 +91,8 @@
 | **Method name**      | `run()`                               | `call()`                              |
 | **Result retrieval** | Not possible                          | Via `Future.get()`                    |
 | **Common use**       | Fire-and-forget tasks                 | Tasks that compute and return results |
+
+
+# Race Condition ( adder subtracter problem.)
+
+      This is a race condition — threads "race" to read/write a shared value.

@@ -1,4 +1,4 @@
-package MultiThread_ThreadPool;
+package MutliThread.MultiThread_Runnable;
 
 public class NumberPrinterTask implements Runnable {
     private final int start;

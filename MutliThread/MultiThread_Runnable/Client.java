@@ -1,4 +1,4 @@
-package MultiThread_Runnable;
+package MutliThread.MultiThread_Runnable;
 
 public class Client {
     public void startTasks() {
