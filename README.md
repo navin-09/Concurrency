@@ -96,3 +96,16 @@
 # Race Condition ( adder subtracter problem.)
 
       This is a race condition — threads "race" to read/write a shared value.
+
+| Feature / Aspect                                  | `synchronized`                                        | `ReentrantLock`                                                           |
+| ------------------------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------- |
+| **Type**                                          | Keyword (language-level)                              | Class (`java.util.concurrent.locks`)                                      |
+| **Reentrancy**                                    | ✅ Yes (reentrant)                                     | ✅ Yes (reentrant)                                                         |
+| **Lock acquisition**                              | Automatic when entering a synchronized block/method   | Manual via `lock()` and `unlock()`                                        |
+| **Lock release**                                  | Automatic when method/block exits (even on exception) | Must be released manually in `finally` block                              |
+| **Try to acquire lock (non-blocking)**            | ❌ Not possible                                        | ✅ `tryLock()` / `tryLock(timeout)`                                        |
+| **Interruptible lock acquisition**                | ❌ No                                                  | ✅ `lockInterruptibly()`                                                   |
+| **Condition variables (wait/notify alternative)** | `wait()`, `notify()`, `notifyAll()`                   | `Condition` objects (`newCondition()`)                                    |
+| **Performance**                                   | Slightly faster for simple locking                    | More flexible but a bit heavier                                           |
+| **Visibility (memory consistency)**               | Automatically handles visibility (like `volatile`)    | Also handles visibility via lock/unlock                                   |
+| **Debugging / Monitoring**                        | Limited (no info on lock state)                       | ✅ Methods like `isLocked()`, `getHoldCount()`, `isHeldByCurrentThread()`  |
