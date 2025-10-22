@@ -1,8 +1,8 @@
-package Synchronization.AdderSubtractorWithLock;
+package Synchronization.AdderSubtractorWithMutex_Lock;
 
-import Synchronization.AdderSubtractorWithLock.SharedResource.SharedResourceWithLock;
-import Synchronization.AdderSubtractorWithLock.Tasks.Adder;
-import Synchronization.AdderSubtractorWithLock.Tasks.Subtractor;
+import Synchronization.AdderSubtractorWithMutex_Lock.SharedResource.SharedResourceWithLock;
+import Synchronization.AdderSubtractorWithMutex_Lock.Tasks.Adder;
+import Synchronization.AdderSubtractorWithMutex_Lock.Tasks.Subtractor;
 
 public class Main {
     public static void main(String[] args) {

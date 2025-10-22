@@ -1,6 +1,6 @@
-package Synchronization.AdderSubtrctor.tasks;
+package Synchronization.AdderSubtractor.tasks;
 
-import Synchronization.AdderSubtrctor.SharedResource.SharedResource;
+import Synchronization.AdderSubtractor.SharedResource.SharedResource;
 
 public class Adder implements Runnable{  
     SharedResource sharedResource;

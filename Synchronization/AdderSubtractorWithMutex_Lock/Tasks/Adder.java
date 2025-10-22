@@ -1,6 +1,6 @@
-package Synchronization.AdderSubtractorWithLock.Tasks;
+package Synchronization.AdderSubtractorWithMutex_Lock.Tasks;
 
-import Synchronization.AdderSubtractorWithLock.SharedResource.SharedResourceWithLock;
+import Synchronization.AdderSubtractorWithMutex_Lock.SharedResource.SharedResourceWithLock;
 
 
 public class Adder implements Runnable {

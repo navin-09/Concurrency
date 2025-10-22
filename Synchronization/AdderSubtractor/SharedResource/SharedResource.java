@@ -1,4 +1,4 @@
-package Synchronization.AdderSubtrctor.SharedResource;
+package Synchronization.AdderSubtractor.SharedResource;
 
 public class SharedResource {
     int count = 0;

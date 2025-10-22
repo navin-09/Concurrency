@@ -1,4 +1,4 @@
-package Synchronization.AdderSubtractorWithLock.SharedResource;
+package Synchronization.AdderSubtractorWithMutex_Lock.SharedResource;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;

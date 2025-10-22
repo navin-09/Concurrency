@@ -1,8 +1,8 @@
-package Synchronization.AdderSubtrctor;
+package Synchronization.AdderSubtractor;
 
-import Synchronization.AdderSubtrctor.SharedResource.SharedResource;
-import Synchronization.AdderSubtrctor.tasks.Adder;
-import Synchronization.AdderSubtrctor.tasks.Subtractor;
+import Synchronization.AdderSubtractor.SharedResource.SharedResource;
+import Synchronization.AdderSubtractor.tasks.Adder;
+import Synchronization.AdderSubtractor.tasks.Subtractor;
 
 public class Main {
 
